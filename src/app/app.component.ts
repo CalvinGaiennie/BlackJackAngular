@@ -9,5 +9,5 @@ import { ButtonTestComponent } from './button-test/button-test.component';
   templateUrl: './app.component.html',
 })
 export class AppComponent {
-  title = 'BlackJackAngular';
+  title = 'Playing with Angular';
 }
