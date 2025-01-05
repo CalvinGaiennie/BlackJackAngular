@@ -1,2 +1,13 @@
-<h1>{{ title }}</h1>
-<p>{{ content }}</p>
+<div class="card">
+  <h2>{{ title }}</h2>
+
+  <!-- Display regular content if provided -->
+  <p *ngIf="content">{{ content }}</p>
+
+  <!-- Display stored inputs if provided -->
+  <div *ngIf="storedInputs && storedInputs.length > 0">
+    <ul>
+      <li *ngFor="let input of storedInputs">{{ input }}</li>
+    </ul>
+  </div>
+</div>

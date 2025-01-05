@@ -1,18 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-button-test',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './button-test.component.html',
-  styleUrl: './button-test.component.css',
 })
 export class ButtonTestComponent {
-  userInput: string = '';
+  userInput = '';
+  storedInputs: string[] = [];
+  @Output() inputStored = new EventEmitter<string>();
 
   storeUserInput() {
-    console.log('Stored input:', this.userInput);
-    // Add your storage logic here
+    if (this.userInput.trim()) {
+      this.storedInputs.push(this.userInput);
+      this.inputStored.emit(this.userInput);
+      this.userInput = '';
+    }
   }
 }
