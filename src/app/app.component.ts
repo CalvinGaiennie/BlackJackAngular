@@ -4,8 +4,8 @@ import { SurveyComponent } from './survey/survey.component';
   selector: 'app-root',
   standalone: true,
   imports: [SurveyComponent],
-  templateUrl: './app.component.html',
+  templateUrl: 'app.component.html',
 })
 export class AppComponent {
-  title = 'Playing with Angular';
+  message: string = 'Messages';
 }
