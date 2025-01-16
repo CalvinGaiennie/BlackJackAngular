@@ -1,14 +1,3 @@
 <h1>{{ title }}</h1>
-<app-button-test (inputStored)="onInputStored($event)"></app-button-test>
-<app-generic-card
-  [storedInputs]="storedInputs"
-  title="Inputs"
-></app-generic-card>
-<app-generic-card
-  title="Props"
-  content="my current understanding is that react 'props' are called inputs and outputs in angular"
->
-</app-generic-card>
-<app-generic-card title="Third Card" content="This is the third card's content">
-</app-generic-card>
-<router-outlet />
+<app-survey></app-survey>
+<p>{{ logStr }}</p>
