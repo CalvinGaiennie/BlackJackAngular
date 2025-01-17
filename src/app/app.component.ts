@@ -7,6 +7,4 @@ import { FormsModule } from '@angular/forms';
   imports: [SurveyComponent, FormsModule],
   templateUrl: 'app.component.html',
 })
-export class AppComponent {
-  message: string = 'Messages';
-}
+export class AppComponent {}

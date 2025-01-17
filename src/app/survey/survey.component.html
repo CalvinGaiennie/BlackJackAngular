@@ -1,13 +1,2 @@
-<p>{{ message }}</p>
-<div>
-  <input
-    [(ngModel)]="newAppointmentTitle"
-    placeholder="Appointment description"
-  />
-  <input
-    [(ngModel)]="newAppointmentDate"
-    type="date"
-    placeholder="Appointment date"
-  />
-  <button (click)="addAppointment()">Add</button>
-</div>
+<input type="text" [(ngModel)]="userName" placeholder="Enter your name" />
+<p>Your name is: {{ userName }}</p>

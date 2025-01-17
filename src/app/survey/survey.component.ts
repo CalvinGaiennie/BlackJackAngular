@@ -1,6 +1,6 @@
-import { Component, Input } from '@angular/core';
-import { Appointment } from '../models/appointment';
+import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+
 @Component({
   selector: 'app-survey',
   templateUrl: './survey.component.html',
@@ -8,13 +8,5 @@ import { FormsModule } from '@angular/forms';
   imports: [FormsModule],
 })
 export class SurveyComponent {
-  @Input() message: string = '';
-
-  newAppointmentTitle: string = '';
-  newAppointmentDate: Date = new Date();
-  appointments: Appointment[] = [];
-
-  addAppointment() {
-    console.log(this.newAppointmentTitle + this.newAppointmentDate);
-  }
+  userName: string = '';
 }
