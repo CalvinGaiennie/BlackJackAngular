@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { SurveyComponent } from './survey/survey.component';
 import { FormsModule } from '@angular/forms';
+import { CardComponent } from './card/card.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [SurveyComponent, FormsModule],
+  imports: [FormsModule, CardComponent],
   templateUrl: 'app.component.html',
 })
 export class AppComponent {}
