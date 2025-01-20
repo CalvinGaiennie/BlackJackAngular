@@ -1,0 +1,4 @@
+<h3>{{ index + 1 }}. {{ question.question }}</h3>
+<p *ngFor="let answer of question.answers; let j = index">
+  {{ answer }}
+</p>
