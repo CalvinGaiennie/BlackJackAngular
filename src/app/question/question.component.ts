@@ -1,6 +1,6 @@
 import { NgFor } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { Question } from '../card/card.component';
+import { Question } from '../quiz-page/quiz-page.component';
 @Component({
   selector: 'app-question',
   imports: [NgFor],

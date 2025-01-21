@@ -10,12 +10,12 @@ export interface Question {
 }
 
 @Component({
-  selector: 'app-card',
+  selector: 'app-quiz-page',
   imports: [FormsModule, NgFor, QuestionComponent],
-  templateUrl: './card.component.html',
-  styleUrl: './card.component.css',
+  templateUrl: './quiz-page.component.html',
+  styleUrl: './quiz-page.component.css',
 })
-export class CardComponent {
+export class QuizPageComponent {
   message: string = 'hey';
   input: string = '';
   questions: Question[] = [
