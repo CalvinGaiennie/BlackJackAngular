@@ -8,6 +8,7 @@ import { Question } from '../quiz-page/quiz-page.component';
   styleUrl: './question.component.css',
 })
 export class QuestionComponent {
+  alphabet: string[] = ['A', 'B', 'C', 'D', 'E', 'F'];
   @Input() question: Question = {
     question: '',
     answers: [],
