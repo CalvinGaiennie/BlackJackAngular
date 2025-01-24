@@ -1,9 +1,19 @@
-<div>
-  <h1>Calvin's Angular Quiz</h1>
-  <div
-    [style]="{ 'padding-left': '30px' }"
-    *ngFor="let question of questions; let i = index"
-  >
-    <app-question [question]="question" [index]="i"></app-question>
-  </div>
+<div *ngIf="!isQuizFinished(); else finishedQuiz">
+  <h2>Question {{ currentQuestionIndex + 1 }}:</h2>
+  <p>{{ questions[currentQuestionIndex].question }}</p>
+  <ul>
+    <li
+      *ngFor="let option of questions[currentQuestionIndex].options"
+      (click)="selectAnswer(option)"
+      [class.selected]="selectedAnswer === option"
+    >
+      {{ option }}
+    </li>
+  </ul>
+  <button (click)="submitAnswer()" [disabled]="!selectedAnswer">Submit</button>
 </div>
+
+<ng-template #finishedQuiz>
+  <h2>Quiz Finished!</h2>
+  <p>Your score is {{ score }}/{{ questions.length }}</p>
+</ng-template>
