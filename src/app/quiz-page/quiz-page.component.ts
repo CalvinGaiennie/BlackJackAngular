@@ -13,6 +13,7 @@ export class QuizPageComponent {
   currentQuestionIndex: number = 0;
   score: number = 0;
   selectedAnswer: string = '';
+  started: boolean = false;
 
   constructor(private quizService: QuizDataService) {
     this.questions = this.quizService.getQuestions();
@@ -35,5 +36,16 @@ export class QuizPageComponent {
 
   isQuizFinished() {
     return this.currentQuestionIndex >= this.questions.length;
+  }
+
+  startQuiz() {
+    this.currentQuestionIndex = 0;
+    this.score = 0;
+    this.selectedAnswer = '';
+    this.started = true;
+  }
+
+  isQuizStarted() {
+    return this.started;
   }
 }

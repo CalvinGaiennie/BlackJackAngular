@@ -1,4 +1,11 @@
 <div *ngIf="!isQuizFinished(); else finishedQuiz">
+  <ng-container *ngIf="!isQuizStarted(); else questionsPage">
+    <h1>Welcome to the start Page</h1>
+    <button (click)="startQuiz()">Start Quiz</button>
+  </ng-container>
+</div>
+
+<ng-template #questionsPage>
   <h2>Question {{ currentQuestionIndex + 1 }}:</h2>
   <p>{{ questions[currentQuestionIndex].question }}</p>
   <ul>
@@ -11,7 +18,7 @@
     </li>
   </ul>
   <button (click)="submitAnswer()" [disabled]="!selectedAnswer">Submit</button>
-</div>
+</ng-template>
 
 <ng-template #finishedQuiz>
   <h2>Quiz Finished!</h2>
