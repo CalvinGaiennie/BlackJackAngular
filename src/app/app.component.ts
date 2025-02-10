@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { QuizPageComponent } from './quiz-page/quiz-page.component';
+import { RouterOutlet, RouterLink } from '@angular/router';
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [FormsModule, QuizPageComponent],
-  templateUrl: 'app.component.html',
+  imports: [RouterOutlet, RouterLink],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css',
 })
-export class AppComponent {}
+export class AppComponent {
+  title = 'latest';
+}
